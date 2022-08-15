@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/cost_of_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="670dp"
+        android:inputType="numberDecimal"
+        android:hint="Cost of Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/service_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How Was the service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost_of_service"/>
+
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="73dp"-->
+<!--        android:layout_marginBottom="419dp"-->
+<!--        android:orientation="vertical"-->
+
+<!--        android:text="calculate"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.275"-->
+<!--        app:layout_constraintStart_toEndOf="@id/calculator"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tip_options"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/calculator"-->
+<!--/>-->
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintTop_toBottomOf="@id/calculator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <RadioGroup
+        android:id="@+id/tip_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_question">
+
+        <RadioButton
+            android:id="@+id/twenty_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amaziing 20%" />
+
+        <RadioButton
+            android:id="@+id/eidgteen_percent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="good 18%" />
+
+        <RadioButton
+            android:id="@+id/five_percent"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="poor 5%" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/calculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Round up tip"
+        app:layout_constraintEnd_toEndOf="@id/tip_options"
+        app:layout_constraintStart_toStartOf="@id/tip_options"
+        app:layout_constraintTop_toBottomOf="@+id/tip_options" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button"/>
+
+    <TextView
+        android:id="@+id/DISPLAY"
+        android:layout_width="119dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="338dp"
+        android:text="tip amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
